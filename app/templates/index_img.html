@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+{% block app_content %}
+    <h1>Hallo, {{ current_user.username }} du geile Socke!</h1>
+    {% if form %}
+    {{ wtf.quick_form(form) }}
+    <br>
+    {% endif %}
+    </nav>
+    <img src="{{url_for('static', filename='casa.jpg')}}" alt="Casa Event" width="800" height="500" />
+{% endblock %}
